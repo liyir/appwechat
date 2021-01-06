@@ -1,2 +1,2 @@
-# appwechat
-# 企业微信移动app测试
+# webwechat
+# 企业微信web测试
