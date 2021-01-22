@@ -1,0 +1,15 @@
+# 列表
+#- a
+#- b
+#- c
+
+#字典
+#a: 123
+
+- find: //*[@text='']
+  action: send
+  cont: 123
+- find: //*[@text='']
+  action: click
+
+
