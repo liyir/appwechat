@@ -46,6 +46,7 @@ class BasePage:
         :return:
         """
         self.find(by,locator).click()
+        self.driver.start_recording_screen()
 
     # 滑动查找
     def scroll_find(self, text):

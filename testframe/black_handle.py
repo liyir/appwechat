@@ -1,5 +1,9 @@
 # 装饰器
+import logging
+
 import allure
+logging.basicConfig(level=logging.INFO)
+# error>info>debug
 
 
 def black_wrapper(fun):
@@ -9,8 +13,9 @@ def black_wrapper(fun):
     :return:
     """
     def run(*args, **kwargs):
-        basepage= args[0]  # 接self  self作为第0个参数被传递给basepage
+        basepage = args[0]  # 接self  self作为第0个参数被传递给basepage
         try:
+            logging.info("start find:\nargs:" + str(args)+ "\nkwargs:" + str(kwargs))
             return fun(*args, **kwargs)  # 闭包
         # 捕获元素没找到异常
         except Exception as e:

@@ -21,6 +21,8 @@ class App(BasePage):
             self.driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
         else:
             self.driver.launch_app()
+
+        # self.driver.start_recording_screen("./tmp.mp4")
         # 操作，在 10 内，每 0.5 s 查找一次元素
         self.driver.implicitly_wait(10)
 
